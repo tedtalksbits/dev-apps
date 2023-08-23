@@ -202,6 +202,15 @@ export const softwareList = {
       plaform: 'macOS',
       category: 'Productivity Tools',
     },
+    {
+      application: "Sourcetree",
+      download_link:
+        '<a target="_blank" href="https://www.sourcetreeapp.com/">Link</a>',
+      docs: 'N/A',
+      version: 'Latest',
+      plaform: 'window',
+      category: 'Version Control',
+    },
   ],
 
   types: {
