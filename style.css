@@ -3,7 +3,7 @@
   --foreground: #000;
   --primary: #000;
   --primary-foreground: #fff;
-  --accent: #267cfd;
+  --accent: #36aef3;
   --accent-foreground: #fff;
   --muted: #eee;
   --muted-foreground: #000;
@@ -143,13 +143,94 @@ select {
   gap: 2rem;
 }
 header {
-  background: var(--muted);
   margin-bottom: 2rem;
   padding: 4rem 1rem;
   min-height: 50vh;
   display: flex;
   align-items: center;
+  --left: 0px;
+  --top: 0px;
+  --right: 0px;
 }
+
+header::before {
+  content: '';
+  background-color: var(--accent);
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  left: var(--left);
+  top: var(--top);
+  z-index: 0;
+  transform: translate(-50%, -50%) scale(1.5);
+  filter: blur(100px);
+  animation: animate1 20s linear infinite;
+}
+
+header::after {
+  content: '';
+  background-color: var(--accent);
+  border-radius: 50%;
+  width: 40rem;
+  height: 40rem;
+  position: absolute;
+  right: var(--right);
+  top: var(--top);
+  z-index: -1;
+  transform: translate(-50%, -50%) scale(1.5);
+  filter: blur(150px);
+  animation: animate2 20s linear infinite;
+  animation-delay: 5s;
+}
+
+/* animate blurred circle */
+@keyframes animate1 {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  45% {
+    left: 0px;
+    top: 100px;
+  }
+  65% {
+    left: 10%;
+    top: 100px;
+  }
+  85% {
+    left: 10%;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    right: 0px;
+    top: 0px;
+  }
+  25% {
+    right: 0px;
+    top: 100px;
+  }
+  50% {
+    right: 10%;
+    top: 100px;
+  }
+  75% {
+    right: 10%;
+    top: 0px;
+  }
+  100% {
+    right: 0px;
+    top: 0px;
+  }
+}
+
 .header {
   max-width: 120ch;
   margin-inline: auto;
@@ -160,14 +241,21 @@ header {
 .header h1 {
   font-size: 4rem;
   font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 .header-1,
 .header-2 {
   display: flex;
   flex-direction: column;
-  text-align: center;
 }
-
 .section {
   min-height: 100vh;
+}
+.download-btn {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  border-radius: var(--border-radius);
+  padding: 10px;
+  display: inline-block;
 }
