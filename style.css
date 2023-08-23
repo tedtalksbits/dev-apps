@@ -168,7 +168,7 @@ header::before {
   animation: animate1 20s linear infinite;
 }
 
-header::after {
+/* header::after {
   content: '';
   background-color: var(--accent);
   border-radius: 50%;
@@ -182,7 +182,7 @@ header::after {
   filter: blur(150px);
   animation: animate2 20s linear infinite;
   animation-delay: 5s;
-}
+} */
 
 /* animate blurred circle */
 @keyframes animate1 {
