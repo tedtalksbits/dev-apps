@@ -125,7 +125,7 @@ select {
   color: var(--muted-foreground);
   outline: none;
 }
-
+/* lists */
 /* custom styles */
 
 .filter-flex-box {
