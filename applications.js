@@ -192,9 +192,17 @@ export const softwareList = {
       download_link: 'https://www.sourcetreeapp.com/',
       docs: 'N/A',
       version: 'Latest',
-      platform: 'window',
+      platform: 'windows',
       category: 'Version Control',
-    },
+    }, 
+    {
+      application: 'Advanced Installer',
+      download_link: 'https://www.advancedinstaller.com/download.html',
+      docs: 'https://www.advancedinstaller.com/hub/msix-packaging.html',
+      version: 'Latest',
+      platform: 'windows',
+      category: 'Windows Installer Packaging'
+    }
   ],
 
   types: {
